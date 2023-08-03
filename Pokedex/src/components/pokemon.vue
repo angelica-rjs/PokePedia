@@ -1,24 +1,19 @@
 
 <script>
-import { ref } from 'vue';
-import { fetchPokemonData } from './api';
-
-const pokemones = ref(null);
-
 export default {
+  props: {
+    pokemones: {
+      type: Array,
+    },
+  },
   data() {
     return {
-      pokemones: [],
-      isLoading: true, // Estado de carga
+      isLoading: true,
     };
   },
-   async created() {
-    pokemones.value = await fetchPokemonData();
-    console.log(pokemones.value.results, "setup")
-    this.pokemones = pokemones.value
+  created() {
     this.isLoading = false;
-    // return pokemones
-  }
+  },
 }
 
 </script>

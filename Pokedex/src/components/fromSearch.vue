@@ -1,5 +1,7 @@
 <script>
 export default {
+ 
+  
   data() {
     return {
       valueInput: "",
@@ -19,7 +21,7 @@ export default {
 
 <template>
   <form class="d-flex flex-wrap">
-    <input  class="input-group-text rounded-pill w-75 p-3 " v-model="valueInput" placeholder="BUSCA UN POKEMON"/>
+    <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueInput" placeholder="BUSCA UN POKEMON"/>
     <button class="btn btn-primary"  type="button" v-on:click="showAlert">buscar</button>
   </form>
 </template>
