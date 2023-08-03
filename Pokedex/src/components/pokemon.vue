@@ -25,29 +25,51 @@ export default {
 
 
 <template>
-
-
-<div> 
-  <form>
-    <input v-model="valueInput" placeholder="BUSCA UN POKEMON"/>
-    <button v-on:click="showAlert">buscar</button>
-  </form>
-</div>
 <div v-if="isLoading">
-    <h1>CARGANDO..</h1>
+    <h1>LOS POKEMONES ESTAN CARGANDO...</h1>
 </div>
-<ul class="py-10 bg-gray-100" v-else>
-  <li v-for="pokemon in pokemones.results" :key="pokemon.id" class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 
-border-solid border-indigo-900 border-4" >
-    <div class="mt-1 p-2">
-      <h2 class="text-slate-700">{{pokemon.name}}  #{{pokemon.id}}</h2>
-    </div>
-       
-    <div class="relative flex items-end overflow-hidden rounded-xl">
-      <img :src="pokemon.img" alt="pokemon image">  
-    </div>
-    {{pokemon.type}}
- 
-  </li>
- </ul> 
+<ul v-else>
+    <li v-for="pokemon in pokemones.results" :key="pokemon.id" class="list">
+         <div class="card" style="width: 18rem;" >
+          <div class="d-flex justify-content-md-center">
+    <h5 class="card-title fs-2">{{ pokemon.name }}</h5>
+    <h5 class="card-title fs-2">#{{pokemon.id }}</h5>
+</div>
+
+            <img :src="pokemon.img" class="card-img-top" :alt="pokemon.name">
+            <div class="card-body">
+                
+               
+                <p class="card-text">{{ pokemon.type }}</p>
+                </div>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            
+        </div>
+    </li>
+</ul>
+
+
+
 </template>
+
+<style>
+.list {
+  list-style: none;
+  padding: 0;
+}
+.card{
+    border-color: #080688;
+    border-width: 5px;
+}
+.card-img-top{
+    margin: auto;
+    width: 200px;
+    margin-top: 20px;
+}
+.card-title{
+    margin-top: 5px;
+    margin-right:14px;
+    margin-left: 15px;
+}
+
+</style>
