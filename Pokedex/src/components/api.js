@@ -3,7 +3,7 @@ import { ref } from 'vue';
 export async function fetchPokemonData() {
   const pokemones = ref([]);
   try {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
     const data = await response.json();
     pokemones.value = data;
     await Promise.all(
@@ -15,7 +15,7 @@ export async function fetchPokemonData() {
         pokemon.type = subData.types[0].type.name;
       })
     );
-    console.log(pokemones.value.results, "js");
+   //console.log(pokemones.value.results, "js");
     return pokemones.value; 
   } catch (error) {
     console.error('Error fetching data:', error);

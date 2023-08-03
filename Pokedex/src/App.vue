@@ -1,19 +1,18 @@
 <script>
-import Pokemones from './components/pokemon.vue';
+import Home from './pages/Home.vue';
 import './styles.css'; 
 
 
 export default {
   components:{
-    Pokemones,
+    Home,
   },
 }
 </script>
 
-
 <template>
   <div>
-    <Pokemones/>
+    <Home />
   </div>
-
 </template>
+
