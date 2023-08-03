@@ -8,7 +8,7 @@ const pokemones = ref(null);
 export default {
   data() {
     return {
-      pokemones: {},
+      pokemones: [],
       isLoading: true, // Estado de carga
     };
   },
