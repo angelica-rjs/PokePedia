@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   </nav>
   <form class="d-flex flex-wrap">
-    <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueSearch" placeholder="BUSCA UN POKEMON"/>
+    <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueSearch" placeholder="BUSCA UN POKEMON POR NOMBRE COMPLETO O ID"/>
     <button class="btn btn-primary" @click="searchPokemon" type="button">buscar</button>
   </form>
   <div v-if="!pokemonesData.results.length" class="text-center">
