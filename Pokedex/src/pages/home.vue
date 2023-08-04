@@ -3,7 +3,7 @@
   </nav>
   <form class="d-flex flex-wrap">
     <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueSearch" placeholder="BUSCA UN POKEMON"/>
-    <button class="btn btn-primary" @click="searPokemon" type="button">buscar</button>
+    <button class="btn btn-primary" @click="searchPokemon" type="button">buscar</button>
   </form>
   <div  class="d-flex flex-wrap ml-5">
   <section v-for="pokemon in pokemones.results" :key="pokemon.id" class="card m-2" style="width: 18rem;">
@@ -30,6 +30,9 @@ export default{
     }
   },
   methods:{
+    searchPokemon(){
+      
+    }
     
   }
 }
