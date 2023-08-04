@@ -4,15 +4,16 @@ export default {
   
   data() {
     return {
-      valueInput: "",
+      avisar: "",
     };
   },
-  methods: {
-      showAlert() {
-        console.log("el valor del input: ",this.valueInput)
-      },
-     
-    },
+   props: ['avisar'],
+   methods: {
+      async enviarPadre() {
+        console.log(this.avisar, "form")
+        this.$emit('escucharHijo',this.avisar)
+      }
+   }
 };
 
 
@@ -21,8 +22,8 @@ export default {
 
 <template>
   <form class="d-flex flex-wrap">
-    <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueInput" placeholder="BUSCA UN POKEMON"/>
-    <button class="btn btn-primary"  type="button" v-on:click="showAlert">buscar</button>
+    <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-bind="avisar" placeholder="BUSCA UN POKEMON"/>
+    <button class="btn btn-primary"  type="button" @click="enviarPadre()">buscar</button>
   </form>
 </template>
 
