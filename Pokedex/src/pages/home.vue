@@ -6,7 +6,7 @@
     <button class="btn btn-primary" @click="searchPokemon" type="button">buscar</button>
   </form>
   <div v-if="!pokemonesData.results.length" class="text-center">
-    Cargando...
+    Se estan cargando los pokemones
   </div>
   <div v-else class="d-flex flex-wrap ml-5">
     <section v-for="pokemon in pokemonesData.results" :key="pokemon.id"  class="card m-2" style="width: 18rem;">
@@ -31,25 +31,19 @@ export default {
   name: 'home',
   data() {
     return {
-      pokemonesData: { results: [] }, // Inicializamos con una lista vacía para evitar errores
+      pokemonesData: { results: [] }, 
       valueSearch: ''
     }
   },
   methods: {
     async searchPokemon() {
-      if (!this.valueSearch) {
-        // Si no hay término de búsqueda, mostrar todos los Pokémon nuevamente
-        this.pokemonesData = await fetchPokemonData();
-      } else {
-        // Si hay término de búsqueda, realizar un nuevo llamado a la API con el término de búsqueda
         this.pokemonesData = await fetchPokemonData(this.valueSearch);
-      }
-      console.log(this.pokemonesData.results, "setup");
+        console.log(this.pokemonesData.results, "searchPokemon");
     }
   },
   async created() {
     this.pokemonesData = await fetchPokemonData();
-    console.log(this.pokemonesData.results, "setup");
+    console.log(this.pokemonesData.results, "create");
   }
 }
 </script>
