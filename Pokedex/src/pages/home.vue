@@ -12,7 +12,7 @@
 <script>
 
 import { ref } from 'vue';
-import { fetchPokemonData } from '../components/api';
+import { fetchPokemonData } from '../api/api';
 import formSearch from '../components/fromSearch.vue';
 import pokemonList from '../components/pokemon.vue';
 
@@ -32,7 +32,7 @@ export default {
     pokemones.value = await fetchPokemonData();
     console.log(pokemones.value.results, "setup")
     this.pokemones = pokemones.value
-    // return pokemones
+    return pokemones
   }
 }
 </script>
