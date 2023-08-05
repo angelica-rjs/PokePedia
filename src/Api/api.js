@@ -8,7 +8,7 @@ export async function fetchPokemonData(search) {
     url= `https://pokeapi.co/api/v2/pokemon/${search}`
     pokemones= await getPokemon(url)
   }else{
-    url= 'https://pokeapi.co/api/v2/pokemon/'
+    url= 'https://pokeapi.co/api/v2/pokemon/?limit=100'
     pokemones= await listPokemons(url)
   }
   return pokemones

@@ -1,9 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  <h1 class="text-center display-1">POKEDEX</h1>
   </nav>
   <form class="d-flex flex-wrap">
     <input  type="text" class="input-group-text rounded-pill w-75 p-3 " v-model="valueSearch" placeholder="BUSCA UN POKEMON POR NOMBRE COMPLETO O ID"/>
-    <button class="btn btn-primary" @click="searchPokemon" type="button">buscar</button>
+    <button class="btn btn-primary h1" @click="searchPokemon" type="button">BUSCAR</button>
   </form>
   <div v-if="!pokemonesData.results.length" class="text-center">
     Se estan cargando los pokemones
@@ -49,6 +50,15 @@ export default {
 </script>
 
 <style>
+.navbar{
+  background-color: rgb(211,211,211,0.5);
+  margin-bottom : 15px;
+}
+
+.text-center{
+  width: 100%;
+}
+
 .input-group-text{
   margin: 10px;
   margin-left: 90px;
@@ -57,8 +67,9 @@ export default {
 }
 
 .btn{
-  height:40px;  
-  margin-top: 17px;
+  height: 50px;  
+  width: 140px;
+  margin-top: 15px;
 }
 
 .list {
@@ -67,7 +78,7 @@ export default {
 }
 .card{
     border-color: #080688;
-    border-width: 5px;
+    border-width: 3px;
 }
 .card-img-top{
     margin: auto;

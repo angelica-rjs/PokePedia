@@ -13,6 +13,7 @@
     - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
     - [Prototipo de alta fidelidad](#prototipo-de-alta-fidelidad)
     - [Proyecto terminado](#proyecto-terminado)
+    - [Backlog](#backlog)
   - [Tecnologias](#tecnologias)
   - [Configuración del proyecto](#configuración-del-proyecto)
    
@@ -35,24 +36,28 @@ De esta forma, quienes deseen buscar un pokemon ya sea por su número único o p
 
 
 
-
 ## Prototipos 
 
 ### Prototipo de baja fidelidad 
  
 Inicialmente se pensó realizar una página que contenga un buscador y las tarjetas de cada uno de los pokemones, además de agregar una funcionalidad extra en la cual el usuario tendría la opción de poder ver una nueva ventana modal con información adicional de un pokemon seleccionado.
 
- ![prototipo de baja fidelidad](./img/../src/img/imgReedme/prototipoBajaFidelidad.png)
+ ![prototipo de baja fidelidad](./img/../src/img/imgReadme/prototipoBajaFidelidad.png)
 
 
 ### Prototipo de alta fidelidad 
 
 Luego de analizar y pedir feedback del prototipo de baja fidelidad, se realizó la elección de colores y formato de las tarjetas con los pokemones, realizando diferentes pruebas de diseño.
 
-![prototipo de baja fidelidad](./img/../src/img/imgReedme/prototipoAltaFidelidad.png)
+![prototipo de baja fidelidad](./img/../src/img/imgReadme/prototipoAltaFidelidad.png)
+
 ### Proyecto terminado
 
 Mediante la realización del proyecto, se priorizó la funcionalidad de la página y el diseño fue adaptado según la necesidad.
+
+### Backlog
+ el panel de planificación quedo asi : 
+ ![backlog](./img/../src/img/imgReadme/backlog.png)
 
 
 ## Tecnologias
@@ -68,17 +73,31 @@ Este proyecto se realizó con las siguientes tecnologías:
 
 ## Configuración del proyecto 
 
+Para instalar este proyecto de manera local, necesitas:
+
+- Editor de texto favorito.
+- npm (Node Package Manager).
+- Git y acceso a GitHub.
+
+1. clonar repositorio
 ```sh
 git clone https://github.com/angelica-rjs/Pokedex
 ```
 
+2. Instalar dependencias
 ```sh
 npm install
 ```
 
+3. Para correr el proyecto debes ejecutar el siguiente comando:
 ```sh
 npm run dev
 ```
+
+4. Abrir el link en el navegador
+
+ ![link](./img/../src/img/imgReadme/link.png)
+   
 
 
 
